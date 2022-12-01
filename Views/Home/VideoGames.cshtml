@@ -1,0 +1,15 @@
+﻿@model List<VideoGameRepository.Classes.VideoGame>
+
+@{
+    ViewData["Title"] = "Video Games";
+}
+
+<div class="text-center">
+    <h1 class="display-1">Video Game List</h1>
+    <ul>
+           @foreach(var game in Model)
+           {
+               <li><a href="@game.WikiLink">@game.Title</a></li>
+           }
+    </ul>
+</div>
